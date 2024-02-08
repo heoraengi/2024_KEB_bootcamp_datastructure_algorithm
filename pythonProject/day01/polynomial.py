@@ -4,10 +4,10 @@ def print_poly(f_x) -> str:
 
     for i in range(len(fx)):
         coefficient = f_x[i]
-
-        if coefficient >= 0:
+        if coefficient >= 0 and i!=0 and coefficient != 0:
             poly_expression += "+"
-        poly_expression += f"{coefficient}x^{term} "
+        if coefficient != 0 :
+            poly_expression += f"{coefficient}x^{term} "
         term -= 1
 
     return poly_expression
