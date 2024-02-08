@@ -1,3 +1,14 @@
+import time
+
+def timer(fucn) :
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = fucn(*args, **kwargs)
+        end = time.time()
+        print(f'time elapsed : {end - start}')
+        return result
+    return wrapper
+
 def factorial(number) -> int:
     """
     팩토리얼 함수 생성
@@ -8,6 +19,13 @@ def factorial(number) -> int:
         return number
     return number * factorial(number-1)
 
+def factorial_with_for(number) -> int:
+    total = 1
+    for i in range(1,number+1):
+        total *= i
+
+    return total
+@timer
 def nCr(n,r) -> int:
     """
     combination 함수 생성
