@@ -26,5 +26,3 @@ fx = [7, 3, 4]
 if __name__ == "__main__":
     print(print_poly(tx,fx))
     print(calculation_poly(int(input("input x : ")), tx, fx))
-
-
