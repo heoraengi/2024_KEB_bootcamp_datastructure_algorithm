@@ -23,8 +23,26 @@ def fibo_repetition(number: int) -> int:
     for i in range(number):
         x, y = y , x+y
 
-    return y
+    return x
 
 
-for i in range(2,20):
-    print(fibo_repetition(i), end=' ')
+
+def fibo_monoization(number) -> int :
+    '''
+    fibonacci function by recursion with monoization
+    :param number: integer number
+    :return: integer number
+    '''
+    global memo
+    if memo[number] is not None :
+        return memo[number]
+    if number < 2 :
+        result = number
+    else :
+        result = fibo_monoization(number-1) + fibo_monoization(number-2)
+        memo[number] = result
+    return result
+
+memo = [None] * 100
+for i in range(2,10):
+    print(fibo_monoization(i), end=' ')
