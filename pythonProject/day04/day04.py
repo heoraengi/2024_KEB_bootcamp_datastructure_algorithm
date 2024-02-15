@@ -18,5 +18,4 @@ def fibo_monoization(number) -> int :
 memo = [0,1] + [None] * (100-1)
 
 n = int(input('Input number : '))
-for i in range(n):
-    print(fibo_monoization(i), end=' ')
+print(f'fibonacci({n}) : {fibo_monoization(n)}')
