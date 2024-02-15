@@ -27,9 +27,9 @@ def fibo_repetition(number: int) -> int:
 
 
 
-def fibo_monoization(number) -> int :
+def fibo_momoization(number) -> int :
     '''
-    fibonacci function by recursion with monoization
+    fibonacci function by recursion with momoization
     :param number: integer number
     :return: integer number
     '''
@@ -39,10 +39,10 @@ def fibo_monoization(number) -> int :
     if number < 2 :
         result = number
     else :
-        result = fibo_monoization(number-1) + fibo_monoization(number-2)
+        result = fibo_momoization(number-1) + fibo_momoization(number-2)
         memo[number] = result
     return result
 
 memo = [None] * 100
 for i in range(2,10):
-    print(fibo_monoization(i), end=' ')
+    print(fibo_momoization(i), end=' ')
